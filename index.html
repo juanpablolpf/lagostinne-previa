@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lagostinne | Frutos do mar e japonês em Fortaleza</title>
+<meta name="description" content="Lagostinne: frutos do mar e cozinha japonesa, com rodízio no almoço e no jantar. Unidades na Varjota (Rua Frei Mansueto, 1225) e no Cambeba (Av. Viena Weyne, 390).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Hanken+Grotesk:wght@400;500;700&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --ground: #F2F7F9; --paper: #FFFFFF; --ink: #0E2A3A; --muted: #4E6573; --line: #D3E2EA;
+    --sea: #0C5C7D; --sea-ink: #FFFFFF; --coral: #F2664B;
+    --display: "Zilla Slab", "Rockwell", "Georgia", serif; --body: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+  a { color: inherit; } img { max-width: 100%; display: block; }
+  :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; text-wrap: balance; }
+  .wrap { max-width: 1160px; margin-inline: auto; padding-inline: 24px; }
+  .preview-bar { background: var(--ink); color: var(--ground); text-align: center; font-size: .88rem; padding: 8px 16px; line-height: 1.4; }
+  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--ground) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .logo { font-family: var(--display); font-weight: 700; font-size: 1.6rem; text-decoration: none; color: var(--sea); }
+  .top nav { display: flex; align-items: center; gap: 24px; }
+  .top nav a { text-decoration: none; color: var(--muted); font-size: .98rem; font-weight: 500; }
+  .top nav a:hover { color: var(--ink); }
+  .btn { display: inline-block; text-decoration: none; font-weight: 700; font-size: 1rem; padding: 12px 22px; border-radius: 8px; background: var(--coral); color: #fff; border: 2px solid var(--coral); }
+  .btn:hover { filter: brightness(1.06); }
+  .btn-line { background: transparent; color: var(--sea); border-color: var(--sea); }
+  .btn-line:hover { background: var(--sea); color: var(--sea-ink); filter: none; }
+  .top nav .btn { padding: 8px 16px; font-size: .95rem; }
+  .menu-toggle { display: none; background: none; border: 2px solid var(--sea); color: var(--sea); border-radius: 8px; padding: 6px 14px; font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; }
+  @media (max-width: 760px) {
+    .menu-toggle { display: inline-block; }
+    .top nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--ground); border-bottom: 1px solid var(--line); padding: 8px 24px 20px; }
+    .top nav a { padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+    .top nav .btn { margin-top: 16px; text-align: center; border-bottom: 2px solid var(--coral); padding: 12px; color: #fff; }
+  }
+  .hero { background: var(--sea); color: var(--sea-ink); }
+  .hero .wrap { display: grid; grid-template-columns: 1fr; gap: 36px; padding-block: 56px 72px; }
+  @media (min-width: 940px) { .hero .wrap { grid-template-columns: 6fr 5fr; align-items: center; padding-block: 80px 96px; } }
+  .hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.8rem); margin-bottom: 20px; }
+  .hero .lede { color: #CFE5EE; font-size: 1.15rem; max-width: 30em; margin-bottom: 28px; }
+  .hero .btn-line { color: #fff; border-color: #CFE5EE; }
+  .hero .btn-line:hover { background: #fff; color: var(--sea); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hero-photos img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; }
+  .hero-photos img.wide { grid-column: 1 / -1; aspect-ratio: 512 / 288; }
+  section.block { padding-block: 84px; border-top: 1px solid var(--line); }
+  .block h2.title { font-size: clamp(2.2rem, 4.6vw, 3.3rem); margin-bottom: 14px; }
+  .block .intro { color: var(--muted); max-width: 38em; margin-bottom: 36px; }
+  .offer { list-style: none; display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 760px) { .offer { grid-template-columns: repeat(2, 1fr); } }
+  .offer li { background: var(--paper); border: 1px solid var(--line); border-left: 5px solid var(--coral); border-radius: 10px; padding: 22px 24px; }
+  .offer h3 { font-size: 1.5rem; margin-bottom: 6px; color: var(--sea); }
+  .offer p { color: var(--muted); }
+  .photos { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 32px; }
+  .photos img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
+  .credit { margin-top: 12px; font-size: .85rem; color: var(--muted); }
+  .units { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 820px) { .units { grid-template-columns: 1fr 1fr; } }
+  .unit { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .unit .info { padding: 24px; }
+  .unit h3 { font-size: 1.7rem; margin-bottom: 6px; }
+  .unit p { color: var(--muted); margin-bottom: 16px; }
+  .unit iframe { display: block; width: 100%; height: 260px; border: 0; }
+  .contact { margin-top: 32px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+  .contact p { color: var(--muted); }
+  .contact a.num { color: var(--coral); font-weight: 700; text-underline-offset: 4px; }
+  footer { border-top: 1px solid var(--line); padding-block: 28px 40px; color: var(--muted); font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  @media (max-width: 480px) { .wrap { padding-inline: 16px; } .actions .btn { flex: 1 1 auto; text-align: center; } }
+</style>
+</head>
+<body>
+  <div class="preview-bar">Proposta de site para o Lagostinne, criada por Juan Filho. Aguardando aprovação.</div>
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="#inicio">Lagostinne</a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Seções">
+        <a href="#casa">O que servimos</a>
+        <a href="#unidades">Unidades</a>
+        <a class="btn" href="https://wa.me/5585986382045" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Frutos do mar e japonês, com rodízio no almoço e no jantar.</h1>
+          <p class="lede">Duas casas em Fortaleza, na Varjota e no Cambeba, com rodízio japonês, pratos de frutos do mar, menu executivo e sobremesas.</p>
+          <div class="actions">
+            <a class="btn" href="https://estabelecimentos.cardapioweb.com/lagostinne" target="_blank" rel="noopener">Fazer pedido</a>
+            <a class="btn btn-line" href="#unidades">Ver as unidades</a>
+          </div>
+        </div>
+        <div class="hero-photos">
+          <img class="wide" src="fotos/fachada.jpg" alt="Letreiro iluminado do Lagostinne na fachada" width="512" height="288">
+          <img src="fotos/poke.jpg" alt="Hashis pegando um sushi de um prato com salmão e manga" width="512" height="640">
+          <img src="fotos/sashimi.jpg" alt="Lâminas de peixe cru servidas numa pedra escura" width="360" height="640">
+        </div>
+      </div>
+    </section>
+
+    <section id="casa" class="block">
+      <div class="wrap">
+        <h2 class="title">O que servimos</h2>
+        <p class="intro">Excelência em frutos do mar e japonês, nas duas unidades.</p>
+        <ul class="offer">
+          <li><h3>Rodízio japonês</h3><p>No almoço e no jantar, com sushis, sashimis e combinados.</p></li>
+          <li><h3>Frutos do mar</h3><p>Pratos da cozinha do mar, como a moqueca de peixe com camarão.</p></li>
+          <li><h3>Menu executivo</h3><p>Uma opção prática para o almoço.</p></li>
+          <li><h3>Petiscos e sobremesas</h3><p>Para dividir na mesa e fechar a refeição.</p></li>
+        </ul>
+        <ul class="photos">
+          <li><img src="fotos/prato.jpg" alt="Prato de frutos do mar servido na mesa" width="361" height="640" loading="lazy"></li>
+          <li><img src="fotos/pratos.jpg" alt="Vários pratos em fila sobre a mesa" width="360" height="640" loading="lazy"></li>
+        </ul>
+        <p class="credit">Fotos: <a href="https://www.instagram.com/lagostinnefortaleza/" target="_blank" rel="noopener">@lagostinnefortaleza</a></p>
+      </div>
+    </section>
+
+    <section id="unidades" class="block">
+      <div class="wrap">
+        <h2 class="title">Unidades</h2>
+        <div class="units">
+          <div class="unit">
+            <div class="info">
+              <h3>Varjota</h3>
+              <p>Rua Frei Mansueto, 1225<br>Varjota, Fortaleza</p>
+              <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Lagostinne%2C+Rua+Frei+Mansueto%2C+1225%2C+Fortaleza+-+CE" target="_blank" rel="noopener">Como chegar</a>
+            </div>
+            <iframe title="Mapa da unidade Varjota" src="https://www.google.com/maps?q=Lagostinne,+Rua+Frei+Mansueto,+1225,+Fortaleza+-+CE&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="unit">
+            <div class="info">
+              <h3>Sul (Cambeba)</h3>
+              <p>Av. Viena Weyne, 390<br>Cambeba, Fortaleza</p>
+              <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Lagostinne+Sul%2C+Av.+Viena+Weyne%2C+390%2C+Cambeba%2C+Fortaleza+-+CE" target="_blank" rel="noopener">Como chegar</a>
+            </div>
+            <iframe title="Mapa da unidade Sul" src="https://www.google.com/maps?q=Lagostinne+Sul,+Av.+Viena+Weyne,+390,+Cambeba,+Fortaleza+-+CE&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="contact">
+          <p>Dúvidas e informações pelo WhatsApp: <a class="num" href="https://wa.me/5585986382045" target="_blank" rel="noopener">(85) 98638-2045</a>. Horários de cada unidade no Instagram.</p>
+          <a class="btn" href="https://wa.me/5585986382045" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Lagostinne</span><span>Varjota e Cambeba, Fortaleza</span></div></footer>
+  <script src="site.js"></script>
+</body>
+</html>
